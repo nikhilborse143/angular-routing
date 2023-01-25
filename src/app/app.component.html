@@ -1,0 +1,92 @@
+<!-- <h1>nikhil borse {{title}} </h1>
+<button (click)="getAdd('nikhil')" >Called fuction</button> <br>
+<br>
+<button (click)="getName()" >Called fuction 2</button> 
+<br>
+<br>
+<input type="text" #box (keyup)="getData('box.value')" placeholder="event keyup"/>
+<br>
+<br>
+<input type="text" #box (input)="getValue(box.value)" placeholder="Enter Name" name="name"/>
+
+<p>
+    Box value is: {{displayVal}};
+</p> -->
+<!-- <h1>{{title}}</h1>
+<input type="text" #box (keyup)= "getValue(box.value)" placeholder=" Enter Name" name="name"/> -->
+<!-- <h1 >{{title}}</h1>
+<input type="text" name="user-name" value= {{name}} disabled={{disable}} >
+<br>
+<br>
+<input type="text" name="user-name" value= {{name}}> -->
+<!-- 
+<button (click) ="counter('min')">--</button><br><br>
+<p>Count: {{count}} </p>
+<button (click) ="counter('add')">++</button>  -->
+<!-- <h1>{{title}}</h1> -->
+<!-- <h1 *ngIf= "show=='yes'; then ifBlock else elseBlock"></h1>
+<ng-template #ifBlock>
+    <h1>if condition</h1>
+</ng-template>
+<ng-template #elseBlock>
+    <h1>Else condition</h1>
+</ng-template> -->
+<!-- <h1>{{title}}</h1> -->
+<!-- <ng-template [ngIf] ="color==='red'">
+    <h1 style= "color:red;"  >Red Color</h1>
+</ng-template>
+<ng-template [ngIf] ="color==='green'">
+    <h1 style= "color:green;"  >Green Color</h1>
+</ng-template>
+<ng-template [ngIf] ="color==='blue'">
+    <h1 style= "color:blue;"  >Blue Color</h1>
+</ng-template> -->
+<!-- <h1>{{title}}</h1> -->
+<!-- <div [ngSwitch]= "color">
+    <h1 *ngSwitchCase= "'red'" style= "color:red;"  >Red Color</h1>
+    <h1 *ngSwitchCase= "'yellow'" style= "color:yellow;"  >yellow Color</h1>
+    <h1 *ngSwitchCase= "'blue'" style= "color:blue;"  >blue Color</h1>
+    <h1 *ngSwitchCase= "'orangered'" style= "color:orangered;"  >orangered Color</h1>
+    <h1 *ngSwitchCase= "'green'" style= "color:green;"  >green Color</h1>
+    <h1 *ngSwitchDefault  >Unknown Color</h1>
+</div> -->
+<!-- <h1>{{title}}</h1> -->
+<!-- <h2 *ngFor ="let item of users ">Name is := {{item}}</h2>
+<h2 *ngFor ="let item of userDetails ">{{item.name}} =/ {{item.email}} =/ {{item.phone}}</h2> -->
+<!-- <h1>{{title}}</h1> -->
+<!-- <ul *ngFor ="let user of users ">
+    <li>name : {{user.name}}</li>
+    <li>phone : {{user.phone}}</li>
+    <li>social Accounts</li>
+    <ul *ngFor ="let account of user.socialAccounts">
+        <li>
+            {{account}}
+        </li>
+    </ul>
+</ul> -->
+<!-- <h1 [style.color] ="color" [style.backgroundColor] ="bgcolor">{{title}}</h1>
+<button (click) ="updateColor()">Update Color</button><br><br> -->
+<app-header></app-header>
+<app-footer></app-footer>
+<h1>{{title}}</h1>
+<form #basicForm="ngForm"(ngSubmit) ="getData(basicForm.value)">
+    <input type="text" ngModel name="user" placeholder="Enter the UserName"/><br><br>
+    <input type="text" ngModel name="email" placeholder="Enter the email"/><br><br>
+    <input type="text" ngModel name="password" placeholder="Enter user password"/><br><br>
+    <input type="text" ngModel name="phone" placeholder="Enter user phone no"/><br><br>
+    <button>Register</button>
+
+</form>
+<ul>
+    
+        <li>{{userData.user}}</li>
+            <li>  {{userData.email}}</li>
+                <li> {{userData.password}}</li>
+        <li>  {{userData.phone}}</li>
+    
+</ul>
+<h4>Toggle Elements</h4>
+<br>
+<button (click) ="toggle()">Toggle</button><br>
+<h2 *ngIf ="display">heading tag
+</h2>
