@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { NgForm } from '@angular/forms'
+import { NgForm } from '@angular/forms';
+
 
 @Component({
   selector: 'app-root',
@@ -8,6 +9,7 @@ import { NgForm } from '@angular/forms'
 })
 export class AppComponent {
   title ='header in angular';
+  // data=10;
   // title = 'style banding';
   //title = 'For Loop';
   // getAdd(nikhil:string)
@@ -82,5 +84,9 @@ display=true;
 toggle()
 {
   this.display=!this.display;
+}
+addTask(item:string)
+{
+  console.warn(item)
 }
 }

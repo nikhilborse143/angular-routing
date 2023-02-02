@@ -67,13 +67,46 @@
 <!-- <h1 [style.color] ="color" [style.backgroundColor] ="bgcolor">{{title}}</h1>
 <button (click) ="updateColor()">Update Color</button><br><br> -->
 <app-header></app-header>
-<app-footer></app-footer>
+<br>
+<br>
+<br>
+<br>
 <h1>{{title}}</h1>
+<app-login></app-login>
 <form #basicForm="ngForm"(ngSubmit) ="getData(basicForm.value)">
     <input type="text" ngModel name="user" placeholder="Enter the UserName"/><br><br>
     <input type="text" ngModel name="email" placeholder="Enter the email"/><br><br>
     <input type="text" ngModel name="password" placeholder="Enter user password"/><br><br>
     <input type="text" ngModel name="phone" placeholder="Enter user phone no"/><br><br>
+    <mat-checkbox > verify</mat-checkbox><br>
+    <mat-slide-toggle>yes/no</mat-slide-toggle><br>
+    <section>
+        <div class="example-label">Mini FAB</div>
+        <div class="example-button-row">
+          <div class="example-flex-container">
+            <div class="example-button-container">
+              <button mat-mini-fab color="primary" aria-label="Example icon button with a menu icon">
+                <mat-icon>menu</mat-icon>
+              </button>
+            </div>
+            <div class="example-button-container">
+              <button mat-mini-fab color="accent" aria-label="Example icon button with a plus one icon">
+                <mat-icon>plus_one</mat-icon>
+              </button>
+            </div>
+            <div class="example-button-container">
+              <button mat-mini-fab color="warn" aria-label="Example icon button with a filter list icon">
+                <mat-icon>filter_list</mat-icon>
+              </button>
+            </div>
+            <div class="example-button-container">
+              <button mat-mini-fab disabled aria-label="Example icon button with a home icon">
+                <mat-icon>home</mat-icon>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
     <button>Register</button>
 
 </form>
@@ -90,3 +123,4 @@
 <button (click) ="toggle()">Toggle</button><br>
 <h2 *ngIf ="display">heading tag
 </h2>
+<app-footer></app-footer>

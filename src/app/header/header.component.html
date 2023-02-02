@@ -1,9 +1,75 @@
+<!-- <header>
 <nav>
+  
      <img src="../../assets/ang.png" alt="app.logo"> 
     <ul>
-        <li><a herf="#" >Home</a></li>
-        <li><a herf="#" >About</a></li>
-        <li><a herf="#" >Login</a></li>
-        <li><a herf="#" >Users</a></li>
-    </ul>
+        <div class="header_item_1">
+            <ul class="navbar-nav mb-md-0">
+              <li class="nav-item">
+               <a class="nav-link active" aria-current="page" href="#">🏠Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " routerLink="login">👩‍⚕About</a>
+              </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="layout">🅿️Product </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="services">🔧service</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="event">📅Events</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="careers">💼Careers</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="contact">📞Contact</a>
+            </li>
+            </ul>
+          </div>
+      </ul>
 </nav>       
+</header>
+<router-outlet></router-outlet> -->
+<header class="header_container navbar navbar-expand-md bg-white fixed-top">
+  <div class="header_item_1">
+    <a class="navbar-brand" href="#">
+      <!-- Cellbeans -->
+      <img
+        src="../../assets/ang.png"
+        width="90"
+        height="70"
+        alt=""
+      />
+    </a>
+  </div>
+
+  <div class="header_item_1">
+    <ul class="navbar-nav mb-md-0">
+      <li class="nav-item">
+       <a class="nav-link active" aria-current="page" href="#">🏠Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " routerLink="login">👩‍⚕About</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="layout">🅿️Product </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="services">🔧service</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="event">📅Events</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="careers">💼Careers</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="contact">📞Contact</a>
+      </li>
+    </ul>
+  </div>
+  <!-- <div class="container"></div> -->
+</header>
+<router-outlet></router-outlet>

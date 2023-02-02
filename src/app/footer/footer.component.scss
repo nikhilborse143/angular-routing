@@ -1,214 +1,179 @@
-//autoprefixer & reset used
-//Tested on Chrome, Firefox, IE11, and iOS.  The responsiveness & the social section is a bit off on IE11.  I'm looking to fix that.
-//It would be best to break down the flex properties into logical classes.  I've actually done that more extensively on the live Pavilion site,  but I've only included one here: flex-rw.
-
-$primary-light-blue: #8DB9ED;
-$primary-line-color: #ccc;
 * {
-  box-sizing: border-box
-}
-html, body {
-  height: 100%
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 body {
-	font: 11px "Open Sans", sans-serif;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	margin: auto;
+  width: 100vw;
+  height: 100vh;
   display: flex;
-  flex-flow: column nowrap;
-  //This justify-content is essentially unnecessary in Firefox and Chrome due to the flex: 1 1 auto on the main.  However, it's needed to push the footer down on IE11
-  justify-content: space-between
+  align-items: flex-end;
+  overflow: hidden;
 }
-ul {
-  list-style: none
-}
-a {
-  text-decoration: none
-}
-.generic-anchor {
-	color: $primary-light-blue;
-	&:visited {
-		color: $primary-light-blue
-	}
-	&:hover {
-		color: $primary-line-color
-	}
-}
-.flex-rw {
-  display: flex;
-  flex-flow: row wrap;
-}
-//This main is mostly to push the footer to the bottom and for demo purposes.
-main {
-  flex: 1 1 auto; //For IE11
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font: 10em "Oswald", sans-serif;
-  color: rgb(155,155,155);
-  line-height: 1
-}
-footer {
-  background: rgb(55,55,55);
-  margin-top: auto;
-  width: 100%
-}
-.footer-list-top {
-  width: 33.333%
-}
-.footer-list-top > li {
-  text-align: center;
-  padding-bottom: 10px
-}
-.footer-list-header {
-  padding: 10px 0 5px 0;
-  color: #fff;
-  font: 2.3vw "Oswald", sans-serif
-}
-.footer-list-anchor {
-  font: 1.3em "Open Sans", sans-serif
-}
-.footer-social-section {
+ul { list-style: none; }
+a { text-decoration: unset; }
+a:hover { text-decoration: underline; }
+ul > li > a { color:#fff; }
+ul > li { line-height: 1.5em; }
+
+
+.footer {
+  display: block;
   width: 100%;
-  align-items: center;
-  justify-content: space-around;
   position: relative;
-  margin-top: 5px;
+  background: #150c21;
+  padding: 150px 25px 50px 25px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
 }
-.footer-social-section::after {
-  content: "";
+.footer-start {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1280px;
+  width: 90%;
+  margin: auto;
+  padding: 80px 100px;
+  background: #705df2;
+  border-radius: 15px;
+}
+.start-learning {
   position: absolute;
-  z-index: 1;
-  top: 50%;
-  left: 10px;
-  border-top: 1px solid $primary-line-color;
-  width: calc(100% - 20px)
+  left: 0;
+  right: 0;
+  top: -150px;
 }
-.footer-social-overlap {
+.footer .inner {
+  display: flex;
+  align-items: self-start;
+  justify-content: space-between;
+  column-gap: 20px;
+  row-gap: 20px;
+  max-width: 1180px;
+  margin: auto;
+  text-align: left;
+}
+.main-logo {
   position: relative;
-  z-index: 2;
-  background: rgb(55,55,55);
-  padding: 0 20px
-}
-.footer-social-connect {
   display: flex;
   align-items: center;
-  font: 3.5em "Oswald", sans-serif;
-  color: #fff
 }
-.footer-social-small {
-  font-size: 0.6em;
-  padding: 0px 20px
+.main-logo .logo {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
 }
-.footer-social-overlap > a {
-  font-size: 3em
-}
-.footer-social-overlap > a:not(:first-child) {
-  margin-left: 0.38em
-}
-.footer-bottom-section {
+.main-logo .logo > img {
+  display: block;
   width: 100%;
-  padding: 10px;
-  border-top: 1px solid $primary-line-color;
-  margin-top: 10px
+  min-width: 40px;
 }
-.footer-bottom-section > div:first-child {
-  margin-right: auto
+.logo-info {
+  text-align: left;
+  line-height: 20px;
 }
-.footer-bottom-wrapper {
-  font-size: 1.5em;
-  color: #fff
+.text {
+  font-size: 17px;
+  line-height: 17px;
+  color: #fff;
+  letter-spacing: .18em;
+  font-weight: 600;
 }
-.footer-address {
-  display: inline;
-  font-style: normal
+.copyright {
+  color: #fff;
+  font-size: 12px;
+  line-height: 12px;
 }
-@media only screen and (max-width: 768px) {
-  .footer-list-header {
-    font-size: 2em
-  }
-  .footer-list-anchor {
-    font-size: 1.1em
-  }
-  .footer-social-connect {
-    font-size: 2.5em
-  }
-  .footer-social-overlap > a {
-    font-size: 2.24em
-  }
-  .footer-bottom-wrapper {
-    font-size: 1.3em
-  }
+.footer .column {
+  width: 100%;
+  font-size: 14px;
+  text-align: left;
 }
-@media only screen and (max-width: 568px) {
-  main {
-    font-size: 5em
-  }
-  .footer-list-top {
-    width: 100%
-  }
-  .footer-list-header {
-    font-size: 3em;
-  }
-  .footer-list-anchor {
-    font-size: 1.5em
-  }
-  .footer-social-section {
-    justify-content: center
-  }
-  .footer-social-section::after {
-    top: 25%
-  }
-  .footer-social-connect {
-    margin-bottom: 10px;
-    padding: 0 10px
-  }
-  .footer-social-overlap {
-    display: flex;
-    justify-content: center;
-  }
-  .footer-social-icons-wrapper {
-    width: 100%;
-    padding: 0
-  }
-  .footer-social-overlap > a:not(:first-child) {
-    margin-left: 20px;
-  }
-  .footer-bottom-section {
-    padding: 0 5px 10px 5px
-  }
-  .footer-bottom-wrapper {
-    text-align: center;
-    width: 100%;
-    margin-top: 10px
-  }
+.footer .column .column-title {
+  font-weight: 700;
+  font-size: 16px;
+  margin-bottom: 0.5em;
+  color: #fff;
 }
-@media only screen and (max-width: 480px) {
-  .footer-social-overlap > a {
-    margin: auto
-  }
-  .footer-social-overlap > a:not(:first-child) {
-    margin-left: 0;
-  }
-  .footer-bottom-rights {
-    display: block
-  }
+.footer .column .column-title:not(:first-child) {
+  margin-top: 1em;
 }
-@media only screen and (max-width: 320px) {
-  .footer-list-header {
-    font-size: 2.2em
+.illustration {
+  left: 8%;
+  position: absolute;
+  top: -28px;
+}
+a.button {
+  display: inline-flex;
+  position: relative;
+  height: 60px;
+  margin-right: 20px;
+  flex-direction: row;
+  align-items: center;
+  overflow: hidden;
+  background: #fff;
+  color: #705df2;
+  border-radius: 36px;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 0 30px;
+  text-decoration: unset;
+  box-shadow: 0px 24px 74px rgb(60 0 189 / 20%);
+}
+.section-title {
+  font-size: 44px;
+  font-weight: 700;
+  color: #fff;
+}
+.section-sub-heading {
+  font-size: 22px;
+  font-weight: 400;
+  color: #fff;
+}
+.section-sub-heading span {
+  opacity: 0.6;
+}
+.section-sub-heading strong {
+  font-weight: 600;
+}
+
+@media only screen and (max-width: 990px) and (min-width: 200px) {
+  body {
+      height: 200vh;
+      overflow-y: scroll;
+      overflow-x: hidden;
   }
-  .footer-list-anchor {
-    font-size: 1.2em
+
+  .footer .inner {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   }
-  .footer-social-connect {
-    font-size: 2.4em
+  .start-learning {
+      position: unset;
   }
-  .footer-social-overlap > a {
-    font-size: 2.24em
+  .footer-start {
+      width: 100%;
+      display: block;
+      padding: 30px 20px;
+      margin: 30px 0;
   }
-  .footer-bottom-wrapper {
-    font-size: 1.3em
+  .section-title {
+      font-size: 30px;
+  }
+  .section-sub-heading {
+      font-size: 18px;
+  }
+  footer.footer {
+      padding-top: 0;
+  }
+  a.button {
+      height: 50px;
+      margin-top: 10px;
+  }
+  .column.is-logo {
+      order: 4;
   }
 }
